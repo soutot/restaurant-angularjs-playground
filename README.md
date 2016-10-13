@@ -1,7 +1,6 @@
 # restaurant-angularjs-playground
-Playing with AngularJS + SVG + Yeoman to create an application which allows users to reserve their seats in an restaurant
 
-This ugly project is just a play with some technologies and standards such as AngularJS, Yeoman, SVG, Gulp, SASS, BEM.
+This ugly project is just a playground with some technologies and standards such as AngularJS, Yeoman, SVG, Gulp, SASS, BEM.
 
 Here I created an example using SVG + AngularJS to make a seat reservation, applying some CSS on SVG:
 app/#/take-your-seat
