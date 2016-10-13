@@ -1,0 +1,44 @@
+<style>
+.contact__form--holder{
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	margin:0 auto;
+}
+.form__input--text, .form__input--textarea{
+	width: 200px;
+	margin:5px;
+}
+
+.form__input--radio{
+	width: 10px;
+	margin:5px;
+}
+.form__input--submit{
+	width: 100px;
+	margin:5px;
+}
+
+</style>
+<section ng-controller="contactFormController">
+	<form name="contactForm" class="contact__form--holder" ng-submit="saveForm()" >
+		<input type="text"  class="form__input--text" placeholder="Name" ng-model="contactForm.name" required />
+		<input type="email" class="form__input--text" placeholder="E-mail" ng-model="contactForm.email" />
+		<input type="date" class="form__input--text" placeholder="Birth date" ng-model="contactForm.birthdate"  />
+		<span> <input type="radio" class="form__input--radio" ng-model="contactForm.gender" value="male" /> Male</span>
+		<span><input type="radio" class="form__input--radio" ng-model="contactForm.gender" value="Female" /> Female</span>
+		<textarea 
+		class="form__input--textarea" rows="4" cols="50" placeholder="Message" ng-model="contactForm.message"></textarea>
+		<input type="submit" class="form__input--submit" value="Submit" />
+	</form>
+	<div ng-show="contactForm.$submitted">
+		<p>Thanks for your contact. We will return soon!</p>
+	</div>
+	<div>
+		<ul>
+			<li ng-repeat="item in list">
+				{{item.name}} - {{item.email}}
+			</li>
+		</ul>
+	</div>
+</section>

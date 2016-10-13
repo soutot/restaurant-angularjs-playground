@@ -1,0 +1,35 @@
+<style>
+
+.dishes__results--holder{display: flex; width:100%;justify-content: space-around; padding:20px 0 20px 0;}
+.dishes__results--item{display: flex; width: 20%; border:1px solid; justify-content: center;}
+</style>
+<section id="dishes" ng-controller="DishesController">
+	<div class="dishes__dishesBanner--holder">
+
+	</div>
+	<form class="dishes__form--filter">
+		<input type="text" placeholder="Search by dish name" ng-model="search" />
+		<select ng-model="dishesTypes.value" ng-options="v for v in dishesTypes.values">
+    	</select>
+	</form>
+	<div class="dishes__results--holder">
+		<div class="dishes__results--item" ng-repeat="dish in dishes | filter:{type:dishesTypes.value} | filter:{name:search}">
+		<ul>
+			<li>
+				{{dish.type}}
+			</li>
+			<li>
+				{{dish.name}}
+			</li>
+			<li>
+				{{dish.description}}
+			</li>
+			<li>
+				{{dish.ingredients}}
+			</li>
+			<li>
+				{{dish.price}}
+			</li>
+		</div>
+	</div>
+</section>

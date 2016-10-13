@@ -1,0 +1,86 @@
+#wrapper{
+  width: 95%;       
+  margin: 20px auto;
+}
+
+header, section{
+  display: inline-block;
+  width: 100%;
+}
+.header__logo--holder {
+  float:left;
+}
+.header__logo--image{
+  border: 1px solid; 
+  width: 80px; 
+  height: 40px;
+}
+#mainmenu{
+  float: left;
+}
+#mainmenu ul{
+  list-style: none;       
+}
+.nav__firstLevel--display{
+  display: flex;
+  margin: 0;
+}
+#mainmenu ul li a:hover{color:#fff;}
+#mainmenu ul li{
+  padding:10px;
+}
+#mainmenu ul li:hover{
+  background: #E7E7E7;
+}
+#mainmenu ul li:hover > .nav__secondLevel--display{
+  display: block;
+  max-height: 300px;
+  transition: max-height 0.7s ease-in;
+}
+.nav__secondLevel--display{
+  list-style: none outside none;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  max-height: 0px;
+  margin: 10px 0 0 -10px;
+  background: #fff;
+}     
+.header__form--search{
+  float:right;
+}
+#carrossel{
+  display: flex;
+  margin-top:20px;
+}
+#carrossel div.img{
+  border: 1px solid; 
+  width: 100%; 
+  height: 200px;
+}
+#carrossel #img2, #img3{
+  display: none;
+}
+#carrossel .seta{
+  justify-content: center; align-items: center; display: flex; padding: 5px;
+}
+#conteudoTexto article, #imagensProdutos article, footer{
+  display: flex;
+  justify-content: center;
+}
+
+#conteudoTexto article p{
+  margin:20px;
+}
+
+#imagensProdutos article div{
+  width: 350px;
+  height: 300px;
+  border: 1px solid;
+  margin: 30px;
+}
+
+.tables__table--click{
+  cursor: pointer;
+}

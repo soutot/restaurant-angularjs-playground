@@ -1,0 +1,19 @@
+<section ng-controller="SeatController">
+	<div ng-include="'/app/images/seats.svg'"></div>
+
+	<div class="modal__selectSeats--holder" ng-show="displayModal">
+		<p>You selected {{table}}</p>
+
+		<div ng-hide="tableTaken">
+			<p>How many seats you want to select?</p>
+			<form ng-submit="saveSeats()">
+				<input type="number" ng-model="seatsNumber" max="{{seatsAvailable}}" min=1 required/>
+				<input type="text" ng-model="seat.user.name" placeholder="Name" required="" />
+				<input type="submit" value="Confirm" />
+			</form>
+		</div>
+		<div ng-show="tableTaken">
+			Sorry, the table you selected had already been taken by {{tableOwner}}.
+		</div>
+	</div>
+</section>
